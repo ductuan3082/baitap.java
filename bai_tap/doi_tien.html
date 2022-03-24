@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Amount</th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+        </tr>
+        <tr>
+            <td><input type="number" id="number"/></td>
+            <td><select id="select1">
+                <option value="vietnam" id="vn1">Việt Nam</option>
+                <option value="USD" id="usd1">USD</option>
+            </select>
+            </td>
+            <td>
+                <select  id="select2">
+                    <option value="USD" id="usd2">USD</option>
+                    <option value="vietnam" id="vn2">Việt Nam</option>
+                </select>
+            </td>
+             <th><p><button onclick="covert()" id="change">Convert</button></p></th>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            Result  
+            <td id="kq"></td>
+        </tr>
+    </table>
+    <script>
+        function covert(){
+            let before = document.getElementById("select1").value;
+            let after = document.getElementById("select2").value;
+            let result = document.getElementById("number").value;
+            if (before == after){
+                document.getElementById("kq").innerHTML = Result;
+            } else {
+                if(before == "vietnam" && after == "USD"){
+                    document.getElementById("kq").innerHTML = result/23000 + "VND";
+                }else{
+                    document.getElementById("kq").innerHTML = result*23000 +"USD";
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>

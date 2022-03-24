@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+    <p>
+        <label >Chuyển đổi nhiệt độ</label>
+        <input type="Number" id="do" placeholder="Chuyển đổi nhiệt độ"
+        oninput="nhietdo(this.value)"
+        onchange="nhietdo(this.value)">
+    </p>
+    <p>Độ c: <span id="outputCelsius"></span></p>
+</form>
+</body>
+</html>
+<script>
+    function nhietdo(valNum){
+        valNum=parseFloat(valNum);
+        document.getElementById("outputCelsius").innerHTML= (valNum-32)/1.8;
+    }
+</script>

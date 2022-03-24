@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<button onclick="bai1()">bài 1</button><br> 
+<button onclick="bai2()">bài 2</button><br>
+<button onclick="bai3()">bài 3</button><br>
+<button onclick="bai4()">bài 4</button><br>
+<button onclick="bai5()">bài 5</button><br>
+<button onclick="bai6()">bài 6</button><br>
+<button onclick="bai7()">bài 7</button><br>
+<!-- Bài 1 sử dụng vòng lặp để đếm từ 1-> 100. khi số là 99, hiển thị hộp thoại thông báo đã hoàn thành -->
+<script>
+  function bai1() {
+    for (a=0; a<100; a++){
+      console.log(a);
+  }document.write("Đã hoàn thành")
+  }
+  // Bài 2 Sử dụng hàm prompt() để lấy thông tin nhiệt độ hiện tại được nhập bởi người truy cập. Nếu nhiệt độ nhập vào trên 100, yêu cầu người dùng giảm nhiệt độ. Nếu nhiệt độ dưới 20, yêu cầu người dùng tăng nhiệt độ.
+ function bai2(){
+   var c = prompt("Điền thông tin nhiệt độ cơ thể");
+   if( c>100){
+  document.write("Giảm nhiệt độ")
+} else if(c<20){
+  document.write("Tăng nhiệt độ")
+}}
+  
+// Bài 3 hiển thị ra 20 số trong dãy fibonacci đầu tiên
+    function bai3(){
+       var count=20;
+      var num1= 0;
+      var num2= 1;
+      for (i=0; i<=count;i++){
+        document.write(num1+"<br>")
+        var ketqua=num1+num2;
+        num1=num2;
+        num2=ketqua;
+      }
+    }
+
+      // Bài 4 Tìm số đầu tiên trong dãy fibonacci chia hết cho 5
+      function bai4(){
+         var count=20;
+      var num1= 0;
+      var num2=1;
+      for(i=0; i<=count;i++){
+        var ketqua=num1+num2;
+        num1=num2;
+        num2=ketqua;
+        if(ketqua%5==0){
+          document.write("Số đầu tiên chia hết cho 5 là: "+ ketqua);
+          break;
+        }
+      }
+      }
+     
+     //Bài 5 Tính tổng của 20 số đầu tiên trong dãy fibonacci
+  
+  function bai5(){
+    var count=20;
+    var num1= 0;
+    var num2=1;
+    var sum=0;
+    for (i=0; i<count; i++){
+      document.write(num1+"<br>")
+      var ketqua=num1+num2;
+      var sum=ketqua;
+      num1=num2;
+      num2=ketqua;
+    }document.write("Tổng 20 số đầu tiên là: "+ sum);}   
+    // Bài 6 Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên
+  function bai6(){
+    var number= 1000;
+  var sum=0;
+  var tong=0
+  for(i=0;i<=number;i++){
+    if(i%7==0){
+    document.write(i+"<br>")
+    sum=sum+i;
+    tong++;
+  }
+    if(tong==30){
+      document.write("Tổng của 30 số chia hết cho 7 là "+ sum);
+break;
+    }
+  }
+  }
+  
+/* Bài 7 Hãy viết một chương trình in ra các số từ 1 đến 100. Nhưng nếu sô chia hết cho 3 thì in ra "fizz" 
+chia hết cho 5 thì in ra là "buzz" thay vì in ra sô đó. nếu số đó chia hết cho cả 3 và 5 thì in ra "fizzBuzz".
+*/
+function bai7(){
+  for (var i=0; i<=100; i++){
+    if(i%3==0 && i%5==0){
+      document.write(i+" In ra fizz buzz"+"<br>");
+    }if (i%3==0){
+      document.write(i+" In ra fizz"+"<br>");
+    }else if(i%5==0){
+      document.write(i+" In ra buzz"+ "<br>");
+    }
+
+  }
+}
+
+</script>
+</body>
+</html>

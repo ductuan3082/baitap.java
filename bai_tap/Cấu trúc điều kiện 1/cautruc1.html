@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="bai1()">Bài 1</button><br>
+    <button onclick="bai2()">Bài 2</button><br>
+    <button onclick="bai3()">Bài 3</button><br>
+    <button onclick="bai4()">Bài 4</button><br>
+    <button onclick="bai5()">Bài 5</button><br>
+    <button onclick="bai6()">Bài 6</button><br>
+    <button onclick="bai7()">Bài 7</button><br>
+  
+</body>
+</html> 
+ <script>
+     function bai1(){
+         // bài 1  nhập vào 2 số a và b và kiểm tra xem a có chia hết cho b ko
+        var nhap=prompt("Nhập a")
+        var nhap1= prompt("Nhập b")
+        if (nhap%nhap1==0){
+            document.write("Chia hết cho b");
+        }else{
+            document.write("Không chia hết cho b ");
+        }}
+    function bai2(){
+        // Bài 2 Nhập tuổi và in ra kết quả nếu tuổi học sinh đó không đủ điều kiện vào học lớp 10.
+       var nhap= prompt(" Nhập tuổi ")
+        if (nhap>=16 ){
+            document.write("học lớp 10");
+        }else{
+            document.write("không đủ tuổi học lớp 10");
+        } 
+    }
+    function bai3(){
+        // bài 3 Nhập một số nguyên bất kỳ và in kết quả ra màn hình để nói cho người dùng biết số đó là lớn hay nhỏ hơn 0
+        var nhap= prompt("Nhập một số nguyên bất kì");
+        if(nhap>0){
+            document.write("Số nguyên lớn hơn 0");
+        }else if(nhap==0){
+            document.write("Số nguyên bằng 0");
+        }else{
+            document.write("Số nguyên nhỏ hơn 0")
+        }
+    }
+    function bai4(){
+// bài 4 Nhập 3 số nguyên và tìm giá trị lớn nhất của ba số nguyên đó
+        var a= 10;
+        var b= 8;
+        var c= 7;
+        max =0
+        if (a>b && a>c){
+            max=a
+        }else if(b>a && b>c){
+            max=b
+        }else if(c>a && c>b){
+            max=c
+        }document.write("Giá trị lớn nhất là:"+max)
+    }
+
+    function bai5(){
+// Bài 5 Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ
+        var bkt=prompt("Nhập điểm kiểm tra");
+        var dtgk=prompt("Nhập điểm thi giữa kì");
+        var dtck=prompt("Nhập điểm thi cuối năm");
+        bkt=parseInt(bkt)
+        dtgk=parseInt(dtgk)
+        dtck=parseInt(dtck)
+       kq = (bkt+dtgk+dtck)/3;
+       if (kq >=8){
+           document.write("Học lực giỏi "+ kq);
+       }else if (kq<=7.9 && kq>6.4){
+           document.write("Học lực khá "+ kq);
+       }else if (kq<=6.4){
+           document.write("Học lực trung bình "+kq)
+       }
+    }
+    function bai6(){
+        //  Bài 6 Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng
+        var Number= prompt("Nhập mức doanh thu")
+        Number=parseInt(Number)
+        if (0<=Number && Number <=200) {
+          let  a= Number*3/100;
+            document.write("Hoa hồng nhận được:"+a);
+        } 
+        else if(200<=Number && Number <= 500){
+            b=Number*5/100;
+            document.write("Hoa hồng nhận được:"+b)
+        }else if (500<=Number ){
+            c=Number*10/100;
+            document.write("Hoa hồng nhận được:"+c)
+        }
+    }
+
+    function bai7(){
+        // Bài 7 Tính cước điện thoại cho một hộ gia đình với các thông số đã cho
+        var number= prompt("Nhập số phút gọi ")
+        if (0<=number && number <= 150){
+            st= number*600
+            alert("Số tiền phải trả là:"+st+"đồng")
+        }else if (150<= number && number<= 200 ){
+            st1= number*400
+            alert("số tiền phải trả là:"+st1+"đồng")
+        }else if(200<=number){
+            st2= number*200
+            alert("Số tiền phải trả là:"+st2+"đồng")
+        }
+    }
+    </script>

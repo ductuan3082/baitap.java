@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <button onclick="Bai1()">Bài 1</button><br>
+  <button onclick="Bai2()">Bài 2</button><br>
+  <button onclick="Bai3()">Bài 3</button><br>
+</body>
+</html> 
+ <script>
+    //  Bài 1 Tạo hàm alertMessage() hiển thị hộp thoại chứa chuỗi  "Xin chao". Gọi hàm từ trong phần <body> của trang web.
+      function Bai1(){
+          function  messager(){
+            alert(" Xin chào");
+        }
+        messager();
+      }
+    // Bài 2: Tạo hàm nhận vào một đối số dạng số, tăng giá trị đối số đó lên 1 và trả lại giá 
+    // trị cho lời gọi hàm. Gọi hàm từ trong phần <body> của trang web và hiển thị kết quả lên màn hình.
+        function Bai2(){
+            var a=5;
+            function name(a){
+                a++
+                document.write(a);
+            }name(a);
+        }
+        // Bài 3:Tạo hàm nhận vào hai tham số. Nếu giá trị của tham số thứ nhất lớn hơn tham số thứ hai, hiển thị hộp thoại thông báo cho người dùng. Nếu giá trị của tham số thứ nhất nhỏ hơn hoặc bằng tham số thứ hai, trả về tổng của hai tham số.
+        function Bai3(){
+            var a=parseFloat (prompt("Điền giá trị 1"));
+            var b=parseFloat (prompt("Điền giá trị 2"));
+            function number(a,b){
+                if(a>b){
+                    document.write("Bạn được sử dụng")
+                }else {
+                    document.write(a+b)
+                }
+            }number(a,b);
+
+        }
+    </script>

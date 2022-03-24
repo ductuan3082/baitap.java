@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var ketqua, i, j;
+        ketqua= "<table border='1' width='300' cellpacing='0' cellpading='3'>";
+         for ( i=1; i<=10; i++ ){
+        ketqua=ketqua+"<tr>";
+            for (j=2; j<=9; j++){
+                ketqua=ketqua+"<td>"+j +'x'+i+'='+ i*j+"</td>";
+            }
+            ketqua=ketqua+"</tr>";
+    }ketqua=ketqua+"</table>";
+    document.write(ketqua);
+
+    </script>
+</body>
+</html>

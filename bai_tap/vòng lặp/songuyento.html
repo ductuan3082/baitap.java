@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+  var i=2;
+  var tong=0;
+  while(tong<20){
+       var sum=0;
+      for(j=2; j<i; j++){
+         if (i%j==0){
+             sum++;
+         }
+      }if(sum==0){
+          document.write(i+" Là số nguyên tố"+"<br>");
+          tong++
+      }i++
+  }document.write("Có "+ tong+" số nguyên tố");
+
+    </script>
+</body>
+</html>

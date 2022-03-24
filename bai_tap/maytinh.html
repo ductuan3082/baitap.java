@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input#ketqua {
+        width: 450px;}  
+        table {
+            margin-left: 393px;
+            width: 400px;
+        background-color: red;}
+        button{
+            width: 60px;}
+            element.style {
+    background: burlywood;
+}
+
+    </style>
+</head>
+<body>
+    <table border="1">
+        <tr >
+            <td colspan="7"><input type="text" id="ketqua" value=""></td>
+        </tr>
+        <tr>
+            <td> <button type="button" id="rad" onclick="xu_ly_rad">rad</button></td>
+            <td></td>
+            <td><button type="button" id="x!" onclick="xu_ly_nhan_than()">x!</button> </td>
+            <td><button type="button" id="(" onclick="xu_ly_ngoac_trai()">(</button></td>
+            <td><button type="button" id=")" onclick="xu_ly_ngoac_phai()">)</button></td>
+            <td><button type="button" id="%" onclick="xu_ly_phan_tram()">%</button></td>
+        <td><button type="button" id="AC" onclick="xu_ly_xoa()">AC</button></td>
+        </tr>
+        <tr>
+            <td><button type="button" id="Inv" onclick="xu_ly_Inv()">Inv</button></td>
+            <td><button type="button" id="sin" onclick="xu_ly_sin()">sin</button></td>
+            <td><button type="button" id="ln" onclick="xu_ly_ln()">ln</button></td>
+            <td><button type="button" id="7" onclick="xu_ly_so_7()">7</button></td>
+            <td><button type="button" id="8" onclick="xu_ly_so_8()">8</button></td>
+            <td><button type="button" id="9" onclick="xu_ly_so_9()">9</button></td>
+            <td><button type="button" id="/" onclick="xu_ly_dau_chia()">/</button></td>
+        </tr>
+        <tr>
+            <td><button type="button" id="π" onclick="xu_ly_pi">π</button></td>
+            <td><button type="button" id="cos" onclick="xu_ly_cos()">cos</button></td>
+            <td><button type="button" id="log" onclick="xu_ly_log()">log</button></td>
+            <td><button type="button" id="4" onclick="xu_ly_so_4()">4</button></td>
+            <td><button type="button" id="5" onclick="xu_ly_so_5()">5</button></td>
+            <td><button type="button" id="6" onclick="xu_ly_so_6()">6</button></td>
+            <td><button type="button" id="x" onclick="xu_ly_dau_nhan()">x</button></td>
+        </tr>
+        <tr>
+            <td><button>e</button></td>
+            <td><button>tan</button></td>
+            <td><button>v</button></td>
+            <td><button type="button" id="1" onclick="xu_ly_so_1()">1</button></td>
+            <td><button type="button" id="2" onclick="xu_ly_so_2()">2</button></td>
+            <td><button type="button" id="3" onclick="xu_ly_so_3()">3</button> </td>
+            <td><button type="button" id="-" onclick="xu_ly_dau_tru()">-</button></td>
+        </tr>
+        <tr>
+            <td><button type="button" id="Ans" onclick="xu_ly_Ans()">Ans</button></td>
+            <td><button type="button" id="EXP" onclick="xu_ly_EXP()">EXP</button></td>
+            <td><button type="button" id="xy" onclick="xu_ly_xy()">xy</button></td>
+            <td><button type="button" id="0" onclick="xu_ly_so_0()">0</button></td>
+            <td><button type="button" id="." onclick="xu_ly_phay()">.</button></td>
+            <td><button type="button" id="=" onclick="xu_ly_dau_bang()">=</button></td>
+            <td><button type="button" id="+" onclick="xu_ly_dau_cong()">+</button></td>
+        </tr>
+    </table>
+</body>
+</html>
+<script>
+    function xu_ly_so_0(){
+        var ketqua=document.getElementById("ketqua").value;
+        document.getElementById("ketqua").value= ketqua+0;
+    }
+    function xu_ly_so_1(){
+        var ketqua=document.getElementById("ketqua").value;
+        document.getElementById("ketqua").value= ketqua+1;
+    }
+    function xu_ly_so_2(){
+        var ketqua=document.getElementById("ketqua").value;
+        document.getElementById("ketqua").value= ketqua+2;
+    }
+    function xu_ly_so_3(){
+        var ketqua=document.getElementById("ketqua").value;
+        document.getElementById("ketqua").value= ketqua+3;
+    }
+    function xu_ly_so_4(){
+        var ketqua=document.getElementById("ketqua").value;
+        document.getElementById("ketqua").value= ketqua+4;
+    }
+    function xu_ly_so_5(){
+        var ketqua=document.getElementById("ketqua").value;
+        document.getElementById("ketqua").value= ketqua+5;
+    }
+    function xu_ly_so_6(){
+        var ketqua=document.getElementById("ketqua").value;
+        document.getElementById("ketqua").value= ketqua+6;
+    }
+    function xu_ly_so_7(){
+        var ketqua=document.getElementById("ketqua").value;
+        document.getElementById("ketqua").value= ketqua+7;
+    }
+    function xu_ly_so_8(){
+        var ketqua=document.getElementById("ketqua").value;
+        document.getElementById("ketqua").value= ketqua+8;
+    }
+    function xu_ly_so_9(){
+        var ketqua=document.getElementById("ketqua").value;
+        document.getElementById("ketqua").value= ketqua+9;
+    }
+    function xu_ly_dau_bang(){
+        var ketqua=document.getElementById("ketqua").value;
+        document.getElementById("ketqua").value= eval(ketqua);
+    }
+    function xu_ly_dau_chia(){
+        var ketqua=document.getElementById("ketqua").value;
+        document.getElementById("ketqua").value= ketqua+"/";
+    }
+    function xu_ly_dau_cong(){
+        var ketqua=document.getElementById("ketqua").value;
+        document.getElementById("ketqua").value= ketqua+"+";
+    }
+    function xu_ly_dau_nhan(){
+        var ketqua=document.getElementById("ketqua").value;
+        document.getElementById("ketqua").value= ketqua+"*";
+    }
+    function xu_ly_dau_tru(){
+        var ketqua=document.getElementById("ketqua").value;
+        document.getElementById("ketqua").value= ketqua+"-";
+    }
+    function xu_ly_xoa(){
+        var ketqua=document.getElementById("ketqua").value;
+        document.getElementById("ketqua").value ="";
+    }
+</script>

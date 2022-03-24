@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="bai1()">Bài 1</button>
+</body>
+</html>
+<script>
+    // Bài 1- Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử.
+    //  Chương trình thực hiện tính và hiển thị xem có bao nhiêu số nguyên lớn hơn hoặc bằng 10.
+    function bai1(){
+        var number= [10,11,12,13,14,8,5,7,5,1];
+        tong=0;
+        while(tong>=10){
+            sum=0;
+            for (i=10; i<=number.length;i++){
+                if(i>=number==0){
+                    sum++
+                }
+            }if (sum==0){
+                document.write(number+" Các số lớn hơn và bằng 10"+"<br>");
+                tong++
+            }number++
+        }document.write("có"+tong+"số lớn hơn và bằng 10");
+    }
+</script>

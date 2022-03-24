@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function person_1(number){
+                var resualt= "";
+            if (number){
+                resualt= "Xin chào quý khách";
+            }else{
+                resualt="Tạm biệt quý khách";
+            }
+            return resualt;
+        }
+        var confirmNumber = confirm("Cảm ơn quý khách đã theo dõi") ;
+         var theNumber= person_1(confirmNumber);
+        alert(theNumber);
+    
+    </script>
+</body>
+</html>

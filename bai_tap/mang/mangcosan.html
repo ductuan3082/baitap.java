@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="bai1()">Bài 1</button><br>
+    <button onclick="bai2()">Bài 2</button><br>
+    <button onclick="bai3()">Bài 3</button><br>
+</body>
+</html>
+<script>
+    // Bài 1 Viết một chương trình Javascript để nối tất cả các phần tử trong một 
+    // mảng chuỗi lại với nhau. Ví dụ có mảng chuỗi như sau: myColor = ["Red", "Green", "White", "Black"]
+    function bai1(){
+        var myColor = ["Red", "Green", "White", "Black"];
+   console.log(myColor.join());
+    }
+    // bài 2 Viết một chương trình nhận một số nhập vào và chèn dấu (-) giữa 2  số chẵn
+    function bai2(){
+const num=prompt();
+const str = toString();
+const result = [str[0]];
+  
+for(let x=1; x<str.length; x++)
+  {
+    if((str[x-1]%2 === 0)&&(str[x]%2 === 0))
+     {
+      result.push('-', str[x]);
+     }
+    else
+     {
+      result.push(str[x]);
+     }
+  }
+document.write(result.join(''));
+    }
+
+    // Bài 3: Viết một chương trình nhập vào một chuỗi và chuyển các ký tự chữ thường trong chuỗi vừa nhập sang thành dạng chữ hoa
+function bai3(){
+  var str = 'Mãi Là Anh Em';
+var UPPER = 'MÃI LÀ ANH EM';
+var LOWER = 'mãi là anh em';
+var result = [];
+  
+  for(var x=0; x<str.length; x++)
+  {
+    if(UPPER.indexOf(str[x]) !== -1)
+    {
+      result.push(str[x].toLowerCase());
+    }
+    else if(LOWER.indexOf(str[x]) !== -1)
+    {
+      result.push(str[x].toUpperCase());
+    }
+    else 
+    {
+      result.push(str[x]);
+    }
+  }
+console.log(result.join(''));}
+   
+</script>

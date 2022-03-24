@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <style>
+      table{
+          width: 200px;
+          height: 200px;
+          background: rgb(47, 226, 151);
+      }
+      button{
+          width: 50px;
+        height: 35px;
+        background: rgba(221, 172, 14, 0.815);
+      }
+      input#ketqua {
+    width: 210px;
+    background: orange;
+}
+  </style>
+
+</head>
+<body>
+    <table  border="1">
+       <tr>
+            <td colspan="4"><input type="text" id="ketqua" value=""> </td>
+       </tr>
+       <tr>
+           <td><button type="button" id="1" onclick="xu_ly_so_1()">1</button></td>
+           <td><button type="button" id="2" onclick="xu_ly_so_2()">2</button></td>
+           <td><button type="button" id="3" onclick="xu_ly_so_3()">3</button></td>
+           <td><button type="button" id="+" onclick="xu_ly_dau_cong()"> +</button></td>
+       </tr>
+       <tr>
+           <td><button type="button" id="4" onclick="xu_ly_so_4()">4</button></td>
+           <td><button type="button" id="5" onclick="xu_ly_so_5()">5</button></td>
+           <td><button type="button" id="6" onclick="xu_ly_so_6()">6</button></td>
+           <td><button type="button" id="-" onclick="xu_ly_dau_tru()">-</button></td>
+       </tr>
+       <tr>
+          <td><button type="button" id="7" onclick="xu_ly_so_7()">7</button></td>
+          <td><button type="button" id="8" onclick="xu_ly_so_8()">8</button></td>
+           <td><button type="button" id="9" onclick="xu_ly_so_9()">9</button></td>
+           <td><button type="button" id="x" onclick="xu_ly_dau_nhan()">x</button></td>
+       </tr>
+       <tr>
+        <td><button type="button" id="C" onclick="xu_ly_xoa()">C</button></td>
+        <td><button type="button" id="0" onclick="xu_ly_so_0()">0</button></td>
+        <td><button type="button" id="=" onclick="xu_ly_dau_bang()">=</button></td>
+        <td><button type="button" id="/" onclick="xu_ly_dau_chia()">/</button></td>
+       </tr>
+        
+    </table>
+</body>
+</html>
+<script>
+    function xu_ly_so_1(){
+        var ketqua=document.getElementById("ketqua").value;
+        document.getElementById("ketqua").value= ketqua+1;
+    }
+    function xu_ly_so_2(){
+        var ketqua=document.getElementById("ketqua").value;
+        document.getElementById("ketqua").value= ketqua+2;
+    }
+    function xu_ly_so_3(){
+        var ketqua=document.getElementById("ketqua").value;
+        document.getElementById("ketqua").value= ketqua+3;
+    }
+    function xu_ly_so_4(){
+        var ketqua=document.getElementById("ketqua").value;
+        document.getElementById("ketqua").value= ketqua+4;
+    }
+    function xu_ly_so_5(){
+        var ketqua=document.getElementById("ketqua").value;
+        document.getElementById("ketqua").value= ketqua+5;
+    }
+    function xu_ly_so_6(){
+        var ketqua=document.getElementById("ketqua").value;
+        document.getElementById("ketqua").value= ketqua+6;
+    }
+    function xu_ly_so_7(){
+        var ketqua=document.getElementById("ketqua").value;
+        document.getElementById("ketqua").value= ketqua+7;
+    }
+    function xu_ly_so_8(){
+        var ketqua=document.getElementById("ketqua").value;
+        document.getElementById("ketqua").value= ketqua+8;
+    }
+    function xu_ly_so_9(){
+        var ketqua= document.getElementById("ketqua").value;
+        document.getElementById("ketqua").value= ketqua+9;
+    }
+    function xu_ly_so_0(){
+        var ketqua=document.getElementById("ketqua").value;
+        document.getElementById("ketqua").value= ketqua+0;
+    }
+    function xu_ly_dau_chia(){
+        var ketqua=document.getElementById("ketqua").value;
+        document.getElementById("ketqua").value= ketqua+"/";
+    }
+    function xu_ly_dau_cong(){
+        var ketqua=document.getElementById("ketqua").value;
+        document.getElementById("ketqua").value= ketqua+"+";
+    }
+    function xu_ly_dau_nhan(){
+        var ketqua=document.getElementById("ketqua").value;
+        document.getElementById("ketqua").value = ketqua +"*";
+    }
+    function xu_ly_dau_tru(){
+        var ketqua=document.getElementById("ketqua").value;
+        document.getElementById("ketqua").value = ketqua+"-";
+    }
+    function xu_ly_dau_bang(){
+        var ketqua=document.getElementById("ketqua").value;
+        document.getElementById("ketqua").value= eval(ketqua);
+    }
+    function xu_ly_xoa(){
+        var ketqua=document.getElementById("ketqua").value;
+        document.getElementById("ketqua").value= "";
+    }
+</script>

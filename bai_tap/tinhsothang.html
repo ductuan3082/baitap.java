@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input id="input" type="text" value=""><button onclick="thang()">Tính số ngày </button>
+    </form>
+    <div id="kq">
+
+    </div>
+</body>
+</html>
+<script>
+    function thang(){
+        var day= +document.getElementById("input").value;
+        
+        switch (day) {
+        case 1:
+            alert("Tháng có 31 ngày");
+            break;
+        case 2:
+            alert("Tháng có 28, 29 ngày");
+            break;
+        case 3:
+            alert("Tháng có 31 ngày");
+        case 4:
+            alert("Tháng có 30 ngày")
+        case 5:
+            alert("Tháng có 31 ngày")
+        case 6:
+            alert("Tháng có 30 ngày")
+        case 7:
+            alert("Tháng có 31 ngày")
+        case 8:
+            alert("Tháng có 31 ngày")
+        case 9:
+            alert("Tháng có 30 ngày")
+        case 10:
+            alert("Tháng có 31 ngày")
+        case 11:
+            alert("Tháng có 30 ngày")
+        case 12:
+            alert("Tháng có 31 ngày")
+        default:
+            break;
+    }  
+}
+</script>
