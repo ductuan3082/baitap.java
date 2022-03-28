@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function myDate(ts_day,ts_month,ts_year){
+        //     this.day= ts_day;
+        //     this.month= ts_month;
+        //     this.year= ts_year;
+            
+
+        //     this.setDay= function(day1){
+        //         this.day= day1;
+        //     }
+        //     this.setMonth= function(Month1){
+        //         this.month= Month1;
+        //     }
+        //     this.setYear= function(year1){
+        //         this.year= year1;
+        //     }
+        //    this.getDay= function(){
+        //        console.log(this.day)
+        //    }
+
+        // }
+        // var myDate1= new myDate(10,5,2022);
+        // // console.log(myDate1);
+        // // myDate1.setDay(11)
+        // // myDate1.setMonth(6)
+        // // myDate1.setYear(2023)
+        // // console.log(myDate1)
+        // myDate1.getDay()
+   
+            function Student(name, age, maSv, class_name){
+                this.name= name;
+                this.age= age;
+                this.maSv= maSv;
+                this.class_name= class_name;
+
+                this.setName = function(name1){
+                    this.name= name1;
+                }
+                this.setAge = function(age1){
+                    this.age=age1;
+                }
+                this.setMaSv= function(maSv1){
+                    this.maSv= maSv1;
+                }
+                this.setClass_name= function(class_name1){
+                    this.class_name= class_name1;
+                }
+                this.getNAme= function(){
+                    return this.name;
+                }
+                this.getAge= function(){
+                    return this.age;
+                }
+                this.getMaSv= function(){
+                     return this.maSv;
+                }
+                this.getClass_name= function(){
+                    return this.class_name;
+                }
+                this.getInfo= function(){
+                   return this.maSv+''+this.name+" "+this.age+" "+this.class_name;
+                }
+            }
+            var Student1= new Student("Tuấn",21,33, "CodeGym");
+           
+            console.log(Student1);
+            Student1.setName("Đức Tuấn");
+            Student1.setAge(22);
+            Student1.setMaSv(30);
+            Student1.setClass_name("CodeGymQuaNgTri");
+            console.log("============")
+            console.log(Student1.getNAme()) ;
+            console.log(Student1.getAge());
+            console.log(Student1.getMaSv());
+            console.log(Student1.getClass_name()) ;
+            console.log("==============")
+            console.log(Student1.getInfo());
+
+
+
+    </script>
+</body>
+</html>

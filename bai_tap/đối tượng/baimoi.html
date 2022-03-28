@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+</head>
+<body>
+    <script>
+        function myDate(name, age, class_name){
+                this.name=name,
+                this.age=age,
+                this.class_name=class_name,
+
+                this.setname=function(name1){
+                    this.name=name1;
+                }
+                this.setage= function(age1){
+                    this.age= age1;
+                }
+                this.setclass_name= function(class_name1){
+                    this.class_name= class_name1;
+                }
+                this.getInfo= function(){
+                    console.log("Name:"+this.name);
+                    console.log("Age:"+ this.age);
+                    console.log("class_name: "+ this.class_name);
+                }
+                 
+        } 
+        class MyDate {
+            constructor(name, age, class_name){
+                this.name = name;
+                this.age = age;
+                this.class_name = class_name;
+            }
+            setname(name_new){
+                this.name = name_new;
+            }
+            setage(age_new){
+                this.age = age_new;
+            }
+            setclass_name(class_name_new){
+                this.class_name = class_name_new;
+            }
+            getInfo(){
+                console.log("name:"+ this.name);
+                console.log("age:"+ this.age);
+                console.log("class_name:"+ this.class_name);
+            }
+        }
+        var MyDate1= new MyDate("Tuấn Richard", 21, "codegym");
+        console.log(MyDate1);
+        console.log(MyDate1.getInfo());
+
+      
+    </script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+  img {
+   
+    width: 334px;
+    text-align: center;
+    margin-left: 409px;
+  
+}
+    </style>
+</head>
+<body>
+    <div class="moi">
+        <img id="anh1" onclick="click_1()">
+        <img id="anh2" onclick="click_2()">
+        <img id="anh3" onclick="click_3()">
+    </div>
+    <script>
+        var arr=[
+        "./img1/anh1.jpg",
+        "./img2/anh1.jpg",
+        "./img3/anhgirl1.jpg",
+        "./img1/anh2.jpg",
+        "./img2/anh2.jpg",
+        "./img3/anhgirl2.jpg",
+        "./img1/anh3.jpg",
+        "./img2/anh31.jpg",
+        "./img3/anhgirl3.jpg",
+        ];
+        var brr=[1,2,3,1,2,3,1,2,3];
+        var min=0, max=2;
+        var random1=Math.floor(Math.random() * (max - min + 1) ) + min;
+        function show1(){
+            document.getElementById('anh1').src=arr[random1];
+        }
+        var min=3, max=5;
+        var random2=Math.floor(Math.random() * (max - min + 1) ) + min;
+        function show2(){
+            document.getElementById('anh2').src=arr[random2];
+        }
+        var min=6, max=8;
+        var random3=Math.floor(Math.random() * (max - min + 1) ) + min;
+        function show3(){
+            document.getElementById('anh3').src=arr[random3];
+        }
+        show1()
+        show2()
+        show3()
+        if(brr[random1]==brr[random2]&&brr[random1]==brr[random3]){
+            show1()
+            show2()
+            show3()
+        }
+        function click_1(){
+            if(random1==2){
+                random1=0;
+            }else{
+                random1++;
+            }
+            document.getElementById('anh1').src=arr[random1];
+            sosanh();
+        }
+        function click_2(){
+            if(random2==5){
+                random2=3;
+            }else{
+                random2++;
+            }
+            document.getElementById('anh2').src=arr[random2];
+            sosanh();
+        }
+        function click_3(){
+            if(random3==8){
+                random3=6;
+            }else{
+                random3++;
+            }
+            document.getElementById('anh3').src=arr[random3];
+            sosanh();
+        }
+        function sosanh(){
+            if((brr[random1]==brr[random2])&&(brr[random1]==brr[random3])){
+                setTimeout(() => {
+                    alert('Chúc mừng anh đã có được em Yêu anh i love you <3'); 
+                }, 100);
+                // setTimeout(set,300)
+                // function set(){
+                //     alert('You Win');
+                // }
+                
+            }
+        }
+    </script>
+</body>
+</html>

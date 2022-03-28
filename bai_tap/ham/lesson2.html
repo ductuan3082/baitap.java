@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="bai1()">Bài 1</button><br>
+    <button onclick="bai2()">Bài 2</button><br>
+</body>
+</html>
+<script>
+    // Bài 1: Viết hàm tính bình phương của một số bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.
+    function bai1(){
+        function binhphuong(a){
+            alert("Bình phương là "+b);
+        }
+        var a=parseFloat(prompt("Điền số"));
+        b=a*a;
+        binhphuong(a);
+    }
+    // Bài 2" Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được
+    function bai2(){
+         var r= prompt("nhập bán kính hình tròn");
+        function hinhtron(r){
+            return [(r*r*3.14),(r*2*3.14)];
+            
+        }alert("Diện tích hình tròn"+ hinhtron(r)[0]);
+         alert("Chu vi hình tròn"+ hinhtron(r)[1]);  
+    }
+    // Bài 3 Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.
+
+    
+</script>

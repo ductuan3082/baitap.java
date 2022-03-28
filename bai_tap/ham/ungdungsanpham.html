@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+​
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #nhap {
+            margin: 24px 0px 30px 16px;
+            padding: 4px;
+        }
+​
+        div {
+            border-radius: 4px;
+            display: inline-block;
+            background-color: #f2f2f2;
+        }
+​
+        h4 {
+            display: inline-block;
+        }
+​
+        #left {
+            margin-left: 432px;
+        }
+        .tr{
+            background-color: #f2f2f2;
+        }
+        th{
+            width: 300px;
+            height: 10px;
+            text-align: left;
+            padding-left: 6px;
+        }
+        td{
+            width: 150px;
+        }
+        table{
+            border-spacing: 0px;
+        }
+        button{
+            color: white;
+            margin-right: 40px;
+            margin-top: 4px;
+            margin-bottom: 4px;
+            margin-left: 0px;
+            padding: 6px 10px;
+            background-color: #50af50;
+            border: 0px;
+            border-radius: 4px;
+        }
+        button:hover{
+            background-color: #2b672b;
+        }
+    </style>
+</head>
+​
+<body>
+    <h3>Add New Product</h3>
+    <div>
+        <input id="nhap" type="text" placeholder="New Product" style="width: 250px;">
+        <button id="add" onclick="click_add();">Add</button>
+    </div>
+    <h3>Display All Product</h3>
+    <h4>Product Name</h4>
+    <h4 id="left"; style="color: red;"></h4>
+    <table id="len2"></table>
+    <table id="len"></table>
+    <div id="edit"></div>
+    <script>
+        var arr=['IPHONE X', 'IPHONE 11','SAMSUNG S10', 'SAMSUNG S10 PLUS'];
+        function show2(){
+            var table=''
+            for(var i=0; i<arr.length; i++){
+                if(i<4){
+                    if(i%2!=0){
+                        table += '<tr class="tr">'
+                        table += '<th>' + arr[i] + '</th>'
+                        table += '<td> <button onclick="click_edit('+i+')">Edit</button></td>'
+                        table += '<td> <button onclick="click_delete('+i+')">Delete</button></td>'
+                        table += '</tr>'
+                    }else{
+                        table += '<tr>'
+                        table += '<th>' + arr[i] + '</th>'
+                        table += '<td> <button onclick="click_edit('+i+')">Edit</button></td>'
+                        table += '<td> <button onclick="click_delete('+i+')">Delete</button></td>'
+                        table += '</tr>'
+                    };
+                }
+            };
+            document.getElementById('len2').innerHTML=table;
+            document.getElementById('left').innerHTML= arr.length+' products';
+        };
+        show2();
+        function click_add() {
+            arr.push(document.getElementById("nhap").value);
+            show();
+            show2();
+        }
+        function show(){
+            var table='';
+            for (let i = 4; i < arr.length; i++) {
+                if(i%2!=0){
+                    table += '<tr class="tr">'
+                    table += '<th>' + arr[i] + '</th>'
+                    table += '<td> <button onclick="click_edit('+i+')">Edit</button></td>'
+                    table += '<td> <button onclick="click_delete('+i+')">Delete</button></td>'
+                    table += '</tr>'
+                }else{
+                    table += '<tr>'
+                    table += '<th>' + arr[i] + '</th>'
+                    table += '<td> <button onclick="click_edit('+i+')">Edit</button></td>'
+                    table += '<td> <button onclick="click_delete('+i+')">Delete</button></td>'
+                    table += '</tr>'
+                }
+            }
+            document.getElementById("len").innerHTML = table;
+            document.getElementById('nhap').value='';
+            document.getElementById('left').innerHTML= arr.length+' products';
+        }
+        function click_delete(x){
+            arr.splice(x,1)
+            show();
+            show2();
+        }
+        function click_edit(x){
+            var a='<input id="nhap2" type="text" value="'+arr[x]+'"><button onclick="click_save('+x+')">Save</button>';
+            document.getElementById('edit').innerHTML=a;
+        }
+        function click_save(y){
+                arr[y] = document.getElementById('nhap2').value;
+                show();
+                show2();
+                document.getElementById('edit').innerHTML='';
+        }
+        // function click_edit(x){
+        //     document.getElementById('nhap').value=arr[x];
+        // }
+    </script>
+</body>
+​
+</html>
