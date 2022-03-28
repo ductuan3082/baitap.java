@@ -1,0 +1,78 @@
+*{
+    text-decoration: none;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    
+    
+}
+.next{
+    display: flex;
+    height: 4em;
+    line-height: 4em;
+    justify-content: space-between;
+    background: #ebebeb;
+    
+}
+.logo{
+   height: 63px;
+   padding-left: 2em;
+   width: 205px;
+}
+.menu{
+    display: flex;
+}
+.menu li{
+    padding-right: 2.2em;
+    font-size: 20px;
+}
+.menu li a:hover{
+    color: red;
+}
+.menu_one{
+    background:#f9f9f9;
+    width: 110px;
+    height: 6em;
+    margin: 0px auto;
+    line-height: 36px;
+    position: absolute;
+    top: 64px;
+    right: 570px;
+    display: none;
+}
+.menu_one li{
+    text-align: center;
+    padding: 0px;
+}
+.menu .menu_link:hover .menu_one{
+    display: block;
+}
+
+
+.logoh{
+    margin-top: 35px;
+    padding-left: 10em;
+}
+.menu_tow{
+    display: flex;
+    line-height: 5em;
+
+    background: #f9f9f9;
+}
+.timkiem{
+    margin-top: 26px;
+    margin-left: 10px;
+
+}
+input.timkiem{
+    height: 31px;
+    width: 320px;
+}
+button {
+    width: 85px;
+    height: 33px;
+}
+.menu_moi{
+   background: #ebebeb;
+   float: left;
+}
